@@ -379,12 +379,14 @@ def cornersHeuristic(state, problem):
 
     "*** YOUR CODE HERE ***"
  
-    dSum = 0
+#     dSum = 0
+    dMax=0
     for corner in state[1]:
         distance = util.manhattanDistance(state[0], corner)
-        dSum += distance 
-        
-    return dSum 
+#         dSum += distance 
+        dMax=max(dMax,distance)
+#     return dSum 
+    return dMax
     
     #return 0 # Default to trivial solution
 
